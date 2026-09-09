@@ -499,9 +499,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
   .hero__art {
     order: -1;
-    max-width: 150px;
+    max-width: 300px;
     margin: 0 0 4px;
-    justify-self: start;
+    justify-self: center;
   }
   .hero__lead {
     max-width: none;
