@@ -1,335 +1,188 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio - Mateus Melo</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="shortcut icon" href="assets/img/logo.svg" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mateus — Desenvolvedor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 </head>
 <body>
 
-    <header>
-        <div class="wrapper">
-            <div class="menu">
-                <div class="header_logo">
-                    <a href="#">
-                    <img src="assets/img/logo.svg" alt="">
-                    <span>Mateus Melo</span>
-                    </a>
-                </div>
-                
-                <div class="header_aside">
-                    <div class="header_nav">
-                        <ul>
-                            <li><a href="#">Início</a></li>
-                            <li><a href="#about">Sobre</a></li>
-                            <li><a href="#projects">Projetos</a></li>
-                            <li><a href="#skills">Habilidades</a></li>
-                            <li><a href="#contact">Contato</a></li>
-                        </ul>
-                    </div>
-                </div>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-                <div class="mobile_btn">
-                    <button id="openMenu"><img class="ico" src="assets/img/open.svg" alt=""></button>
-                </div>
-            </div>
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="#topo">
+      <span class="nav__dot" aria-hidden="true"></span>
+      mateus<span class="accent">.</span>dev
+    </a>
 
-            <div class="mobile-nav">
-                <ul>
-                    <li class="nav_item"><a href="#" class="nav-link">Início</a></li>
-                    <li class="nav_item"><a href="#about" class="nav-link">Sobre</a></li>
-                    <li class="nav_item"><a href="#projects" class="nav-link">Projetos</a></li>
-                    <li class="nav_item"><a href="#skills" class="nav-link">Habilidades</a></li>
-                    <li class="nav_item"><a href="#contact" class="nav-link">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+    <nav class="nav__links" id="nav-links">
+      <a href="#sobre">sobre</a>
+      <a href="#projetos">projetos</a>
+      <a href="#contato">contato</a>
+    </nav>
 
-    <div id="hero-section">
-        <div class="wrapper">
-            <div class="col-a">
-                <div class="hero-text">
-                    <h2>Olá, eu sou</h2>
-                    <h1>Mateus Melo</h1>
-                    <h2>Desenvolvedor Front-end</h2>
-                </div>
-                <div class="hero-btn">
-                    <a href="https://www.linkedin.com/in/mateus-melo-036411262" target="_blank"><button>Linkedin</button></a>
-                    <a href="https://github.com/TheuZN" target="_blank"><button>GitHub</button></a>
-                </div>
-            </div>
-            <div class="col-b">
-                <div class="hero-img">
-                    <img src="assets/img/banner2.png" alt="">
-                </div>
-            </div>
-            <div class="scrolldown">
-                <a href="#about">
-                    <span></span>
-                    <span></span>
-                </a>
-            </div>
-        </div>
+    <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- HERO -->
+  <section class="hero" id="topo">
+    <div class="hero__text">
+      <p class="hero__kicker">Front-end · Angular · e-learning · .NET</p>
+      <h1 class="hero__title">Olá.<br>Sou o Mateus.</h1>
+      <p class="hero__lead">
+        Desenvolvo interfaces em Angular e crio conteúdo de e-learning pro SENAI-SP —
+        do storyboard em SCORM ao componente na tela. Gosto de projetos que resolvem
+        um problema de verdade, não só de mostrar código bonito.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#projetos">Ver projetos</a>
+        <a class="btn btn--ghost" href="#contato">Falar comigo</a>
+      </div>
     </div>
 
-    <section id="about">
-        <h1 class="title">Sobre Mim</h1>
+    <div class="hero__art" aria-hidden="true">
+      <img src="img/pc.png" alt="Ilustração de um computador">
+    </div>
+  </section>
 
-        <div class="wrapper">
-            <div class="col-a">
-                <div class="about-img">
-                    <img src="assets/img/eu.png" alt="">
-                </div>
-            </div>
+  <!-- STACK STRIP -->
+  <section class="stack" id="stack">
+    <div class="stack__inner">
+      <ul class="stack__list">
+        <li>Angular</li>
+        <li>TypeScript</li>
+        <li>SCORM</li>
+        <li>Tailwind CSS</li>
+        <li>.NET</li>
+        <li>SQL</li>
+        <li>Git</li>
+      </ul>
+    </div>
+  </section>
 
-            <div class="col-b">
-                <div class="about-text">
-                    <p>
-                        Meu nome é Mateus, tenho 23 anos, e sou fascinado por tecnologia e games. Aos oito anos de idade ganhei meu primeiro computador e videogame junto com minha irmã e desde lá sempre gostei de aprender a usar as ferramentas e sites. Aos dezesseis anos comecei a trabalhar com E-commerce e utilizar sites como Mercado Livre, Magalu e Americanas e ao longo do tempo fiquei impressionado com a forma que eles revolucionaram as vendas do varejo. A partir daí, tive curiosidade para começar a pesquisar sobre como funcionavam esses sites, nessa época comecei a faculdade de Sistemas de Informação para me aprofundar no estudo de desenvolvimento de software. Atualmente estou focando no estudo de desenvolvimento Front-end, fazendo projetos pessoais e, por fim, estou a procura da minha primeira oportunidade profissional nessa área.
-                    </p>
-                    <a class="hero-btn" href="assets/img/Curriculo.pdf" target="_blank"><button>Currículo</button></a>
-                </div>
-            </div>
+    <!-- SOBRE -->
+  <section class="about" id="sobre">
+    <div class="about__text">
+      <h2>Sobre</h2>
+      <p>
+        Trabalho no SENAI-SP entre diagramação editorial, revisão técnica de material
+        didático e desenvolvimento de e-learning — o que me deixou com um pé na parte
+        visual e outro no código. Fora do trabalho, sigo construindo os mesmos tipos
+        de ferramenta por conta própria, quase sempre em Angular.
+      </p>
+      <p>
+        Prefiro reescrever um projeto antigo até ele ficar redondo a começar dez
+        projetos novos pela metade. Se um app resolveu um problema real uma vez,
+        vale a pena deixá-lo bem feito.
+      </p>
+    </div>
+    <ul class="about__facts">
+      <li><span>Base</span>São Paulo - SP</li>
+      <li><span>Foco atual</span>Angular · .NET</li>
+      <li><span>GitHub</span>@TheuZN</li>
+      <li><span>Instagram</span>@mateus_gmelo</li>
+    </ul>
+  </section>
+
+  <!-- PROJETOS -->
+  <section class="projects" id="projetos">
+    <div class="section-head">
+      <h2>Projetos</h2>
+      <p>Uma seleção do que ando construindo — de reescritas de projetos reais a experimentos pessoais.</p>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="card">
+        <div class="card__top">
+          <span class="card__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="card__file">easystock.ts</span>
         </div>
-    </section>
-
-    <section id="projects">
-        <h1 class="title">Projetos</h1>
-
-        <div class="wrapper">
-
-            <div class="project-base">
-                <div class="project-img">
-                    <a href="https://flickpicks-ruby.vercel.app" target="_blank"><img src="assets/img/proj5.png" alt=""></a>
-                </div>
-
-                <div class="project-text">
-                    <h3>FlickPicks</h3>
-                        <p>Projeto feito com a API de filmes do The Movie DataBase utilizando Angular e SCSS.</p>
-                        <h4>Tecnologias utilizadas: Angular, API TMDB e SCSS;</h4>
-                        <a href="https://flickpicks-ruby.vercel.app" target="_blank"><button class="btn-project">Vizualizar<img class="ico" src="assets/img/ico-link.svg" alt=""></button></a>
-                        <a href="https://github.com/TheuZN/flickpicks" target="_blank"><button class="btn-project">GitHub<img class="ico" src="assets/img/ico-git.svg" alt=""></button></a>
-                </div>
-            </div>
-
-            <div class="project-base">
-                <div class="project-img">
-                    <a href="https://estoque-two.vercel.app/" target="_blank"><img src="assets/img/proj2.png" alt=""></a>
-                </div>
-
-                <div class="project-text">
-                    <h3>EasyStock</h3>
-                        <p>Projeto feito para aprofundar os meus estudos com angular e firebase.</p>
-                        <h4>Tecnologias utilizadas: Angular e Firebase;</h4>
-                        <a href="https://estoque-two.vercel.app/" target="_blank"><button class="btn-project">Vizualizar<img class="ico" src="assets/img/ico-link.svg" alt=""></button></a>
-                        <a href="https://github.com/TheuZN/estoque" target="_blank"><button class="btn-project">GitHub<img class="ico" src="assets/img/ico-git.svg" alt=""></button></a>
-                </div>
-            </div>
-
-
-            <div class="project-base">
-
-                <div class="col-a">
-                    <div class="project-img">
-                        <a href="https://theuzn.github.io/estudos-html-css/" target="_blank"><img src="assets/img/proj1.png" alt=""></a>
-                    </div>
-                </div>
-
-                <div class="col-b">
-                    <div class="project-text">
-                        <h3>Strong GYM</h3>
-                            <p>Projeto de nível iniciante desenvolvido com HTML e CSS com objetivo de aplicar o estudo obtido em cursos e na faculdade.</p>
-                            <h4>Tecnologias utilizadas: HTML e CSS;</h4>
-                            <a href="https://theuzn.github.io/estudos-html-css/" target="_blank"><button class="btn-project">Vizualizar<img class="ico" src="assets/img/ico-link.svg" alt=""></button></a>
-                            <a href="https://github.com/TheuZN/estudos-html-css" target="_blank"><button class="btn-project">GitHub<img class="ico" src="assets/img/ico-git.svg" alt=""></button></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-base">
-                <div class="project-img">
-                    <a href="https://stronggym.netlify.app/" target="_blank"><img src="assets/img/proj4.png" alt=""></a>
-                </div>
-
-                <div class="project-text">
-                    <h3>StrongGYM 2.0</h3>
-                        <p>Projeto realizado com intuito de consolidar meu conhecimento em HTML e CSS e aplicar efetivamente o JavaScript.</p>
-                        <h4>Tecnologias utilizadas: HTML, CSS e JavaScript;</h4>
-                        <a href="https://stronggym.netlify.app/" target="_blank"><button class="btn-project">Vizualizar<img class="ico" src="assets/img/ico-link.svg" alt=""></button></a>
-                        <a href="https://github.com/TheuZN/StrongGYM-2.0" target="_blank"><button class="btn-project">GitHub<img class="ico" src="assets/img/ico-git.svg" alt=""></button></a>
-                </div>
-            </div>
-
-            <div class="project-base">
-                <div class="project-img">
-                    <a href="https://theuzn.github.io/Music-Player/" target="_blank"><img src="assets/img/proj3.png" alt=""></a>
-                </div>
-
-                <div class="project-text">
-                    <h3>Music Player</h3>
-                        <p>Projeto feito a partir dos estudos de JavaScript com intuito de fixar o conhecimento de HTML e CSS e pôr em prática o JS.</p>
-                        <h4>Tecnologias utilizadas: HTML, CSS e JavaScript;</h4>
-                        <a href="https://theuzn.github.io/Music-Player/" target="_blank"><button class="btn-project">Vizualizar<img class="ico" src="assets/img/ico-link.svg" alt=""></button></a>
-                        <a href="https://github.com/TheuZN/Music-Player" target="_blank"><button class="btn-project">GitHub<img class="ico" src="assets/img/ico-git.svg" alt=""></button></a>
-                </div>
-            </div>
-
-            <div class="project-base">
-                <div class="project-img">
-                    <a href="https://golden-gate-bank.netlify.app/" target="_blank"><img src="assets/img/proj6.png" alt=""></a>
-                </div>
-
-                <div class="project-text">
-                    <h3>Golden Gate</h3>
-                        <p>Projeto feito com intuito de pôr em prática alguns conhecimentos de validação de formulários e mobile first.</p>
-                        <h4>Tecnologias utilizadas: HTML, CSS e JavaScript</h4>
-                        <a href="https://golden-gate-bank.netlify.app/" target="_blank"><button class="btn-project">Vizualizar<img class="ico" src="assets/img/ico-link.svg" alt=""></button></a>
-
-                        <a href="https://github.com/TheuZN/goldenGate" target="_blank"><button class="btn-project">GitHub<img class="ico" src="assets/img/ico-git.svg" alt=""></button></a>
-                </div>
-            </div>
-
+        <img class="card__shot" src="img/easystock.png" alt="Captura de tela do projeto EasyStock">
+        <div class="card__body">
+          <h3>EasyStock</h3>
+          <p>Reescrita em Angular 22 de um app real de controle de estoque, com login via Firebase e área de demonstração para visitantes testarem.</p>
+          <ul class="card__tags">
+            <li>Angular 22</li><li>Firebase</li><li>UI própria</li>
+          </ul>
         </div>
-    </section>
-
-    <section id="skills">
-        <h1 class="title">Habilidades</h1>
-
-        <div class="wrapper">
-            <div class="accordion">
-                <div class="item-accordion">
-                    <h3 class="title-accordion"> <img src="assets/img/html.png" alt=""> HTML 5</h3>
-                    <p class="text-accordion">Hyper Text Markup Language, ou seja, linguagem de marcação de hipertexto (elementos como textos, imagens e vídeos conectados entre si).Trata-se de uma linguagem de marcação para desenvolver páginas e documentos eletrônicos para a internet, fornecendo informações para usuários, navegadores e mecanismos de busca.<a href="https://br.godaddy.com/blog/o-que-e-html-e-para-que-serve/" target="_blank">Veja mais</a>   
-                    </p>                 
-                </div>
-            </div>
-
-            <div class="accordion">
-                <div class="item-accordion">
-                    <h3 class="title-accordion"><img src="assets/img/sass.png" alt=""> SASS</h3>
-                    <p class="text-accordion">O SASS é uma linguagem de extensão do CSS, a sigla significa “Syntactically Awesome Style Sheets” traduzindo ao pé da letra, folhas de estilo com uma sintaxe incrível. A sua ideia é adicionar recursos especiais como variáveis, mixins, funções e operações e outras opções variadas que iremos comentar. O SASS tem como objetivo tornar o processo de desenvolvimento mais simples e eficiente, agora, veremos alguns exemplos da versatilidade dessa tecnologia.
-                    <a href="https://www.ufsm.br/pet/sistemas-de-informacao/2021/09/22/o-que-e-sass-venha-entender-esse-novo-metodo-de-escrever-css" target="_blank">Veja mais</a>
-                    </p>                    
-                </div>
-            </div>
-
-            <div class="accordion">
-                <div class="item-accordion">
-                    <h3 class="title-accordion"> <img src="assets/img/js.png" alt=""> JavaScript</h3>
-                    <p class="text-accordion">JavaScript é uma linguagem de programação de alto nível criada, a princípio, para ser executada em navegadores e manipular comportamentos de páginas web.Segundo a Mozilla Foundation, empresa responsável pela criação do JS, "JavaScript é uma linguagem de programação, leve, interpretada, orientada a objetos, baseada em protótipos e em first-class functions (funções de primeira classe), mais conhecida como a linguagem de script da Internet".
-                    <a href="https://kenzie.com.br/blog/javascript/" target="_blank">Veja mais</a>
-                    </p>                    
-                </div>
-            </div>
-
-            <div class="accordion">
-                <div class="item-accordion">
-                    <h3 class="title-accordion"><img src="assets/img/angular.png" alt=""> Angular</h3>
-                    <p class="text-accordion">Angular é um framework de código aberto desenvolvido pelo Google para a criação de aplicativos dinâmicos e interativos da web. Ele se baseia em TypeScript, uma linguagem superset do JavaScript, e utiliza uma abordagem orientada a componentes para a construção de interfaces. O Angular oferece uma estrutura sólida para desenvolvimento, incluindo suporte a gerenciamento de estado, roteamento, validação de formulários e muito mais.
-                    <a href="https://www.alura.com.br/artigos/angular-js" target="_blank">Veja mais</a>
-                    </p>                    
-                </div>
-            </div>
-
-            <div class="accordion">
-                <div class="item-accordion">
-                    <h3 class="title-accordion"> <img src="assets/img/git.png" alt=""> Git</h3>
-                    <p class="text-accordion">GIT é um Sistema de Controle de Versões Distribuído ou DVCS. Estes sistemas de controle possuem a função de registrar quaisquer alterações feitas em cima de um código, armazenando essas informações e permitindo que, caso seja necessário, um programador possa regredir a versões anteriores de uma aplicação de modo simples e rápido. Este tipo de sistema também simplifica muito o processo de compartilhamento de um projeto com um time, por exemplo, ou com outros programadores.
-                    <a href="https://kenzie.com.br/blog/o-que-e-git/" target="_blank">Veja mais</a>
-                    </p>                    
-                </div>
-            </div>
-
-            <div class="accordion">
-                <div class="item-accordion">
-                    <h3 class="title-accordion"> <img src="assets/img/icon-github.png" alt=""> GitHub</h3>
-                    <p class="text-accordion">GitHub é um serviço baseado em nuvem que hospeda um sistema de controle de versão (VCS) chamado Git. Ele permite que os desenvolvedores colaborem e façam mudanças em projetos compartilhados enquanto mantêm um registro detalhado do seu progresso. Um sistema de controle de versão ajuda a acompanhar as mudanças feitas no código base. E mais, ele também registra quem efetuou a mudança e permite a restauração do código removido ou modificado.
-                    <a href="https://www.hostinger.com.br/tutoriais/o-que-github" target="_blank">Veja mais</a>
-                    </p>                    
-                </div>
-            </div>
-
+        <div class="card__link">
+          <a  href="flickpicks-v2.vercel.app">Ver projeto</a>
+          <br>
+          <a  href="https://github.com/TheuZN/flickpicksV2">Ver github</a>
         </div>
-    </section>
+      </article>
 
-    <section id="contact">
-        <h1 class="title">Contato</h1>
-        <div class="wrapper">
-            <div class="col-a">
-                <div class="contact-card">
-                    <div class="contact-info">
-                        <img src="assets/img/ico-loca.svg" alt="">
-                        <span>São Paulo - SP</span>
-                    </div>
-
-                    <div class="contact-info">
-                        <img src="assets/img/ico-whatsapp.svg" alt="">
-                        <span>(11) 96563-3837</span>
-                    </div>
-
-                    <div class="contact-info">
-                        <img src="assets/img/ico-email.svg" alt="">
-                        <span>mateus.gon.melo@gmail.com</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-b">
-                <div class="contact-form">
-                    <div class="massage-form">
-                        <h3>Mensagem</h3>
-                        <span>Envie uma mensagem, <br> será um prazer respondê-lo.</span>
-                    </div>
-                    <form action="https://formsubmit.co/mateus.gon.melo@gmail.com" method="POST">
-                        <fieldset>
-                            <label for="name">Nome:</label>
-                            <input type="text" name="name" minlength="6" required>
-                            <span class="message"></span>
-                        </fieldset>
-                        <fieldset>
-                            <label for="email">E-Mail:</label>
-                            <input type="email" name="email" minlength="4" required>
-                            <span class="message"></span>
-                        </fieldset>
-                        <fieldset>
-                            <label for="subject">Assunto:</label>
-                            <input type="text" name="subject" required>
-                            <span class="message"></span>
-                        </fieldset>
-                        <fieldset>
-                            <label for="message">Mensagem:</label>
-                            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
-                            <span class="message"></span>
-                        </fieldset>
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://theuzn.github.io/meuportfolio/next.html">
-                        <div>
-                            <input class="send-button" value="Enviar" type="submit">
-                        </div>
-                    </form>
-                </div>
-            </div>
+      <article class="card">
+        <div class="card__top">
+          <span class="card__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="card__file">storybuilder.ts</span>
         </div>
-    </section>
+        <img class="card__shot" src="images/storybuilder.png" alt="Captura de tela do projeto storyBuilder">
+        <div class="card__body">
+          <h3>storyBuilder</h3>
+          <p>Ferramenta para montar storyboards de cursos do SENAI, substituindo o processo manual em Word por uma estrutura de dados organizada com drag-and-drop.</p>
+          <ul class="card__tags">
+            <li>Angular 22</li><li>Angular CDK</li><li>Standalone</li>
+          </ul>
+        </div>
+        <div class="card__link">
+          <a href="https://flickpicks-v2.vercel.app/" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+          <a  href="https://github.com/TheuZN/flickpicksV2">Ver github</a>
+        </div>
+      </article>
 
-    <footer>
-        <div class="wrapper">
-                <div class="footer-contact">
-                    <h4>Desenvolvido por: Mateus Melo</span>
-                </div>
+      <article class="card card--wide">
+        <div class="card__top">
+          <span class="card__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="card__file">FlickPicks</span>
+          <span class="card__badge">Uso pessoal</span>
+        </div>
+        <img class="card__shot shot--wide" src="img/flickpicks.png" alt="Captura de tela do projeto FlickPicks">
+        <div class="card__body">
+          <h3>FlickPicks</h3>
+          <p>FlickPicks é um app de descoberta de filmes/séries feito com Angular 22 (standalone components, signals, change detection zoneless) e Tailwind CSS 4, consumindo a API da TMDB direto pelo cliente.</p>
+          <ul class="card__tags">
+            <li>Angular 22</li><li>The Movie DB API</li><li>Tailwind CSS</li>
+          </ul>
+        </div>
+        <div class="card__link">
+          <a  href="flickpicks-v2.vercel.app">Ver projeto</a>
+          <br>
+          <a  href="https://github.com/TheuZN/flickpicksV2">Ver github</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-                <div class="footer-ico">
-                    <a href="https://github.com/TheuZN" target="_blank"><img src="assets/img/icon-github.png" alt=""></a>
-                    <a href="https://www.instagram.com/mateus_gmelo/" target="_blank"><img src="assets/img/icon-instagram.png" alt=""></a>
-                    <a href="https://www.linkedin.com/in/mateus-melo-036411262" target="_blank"><img src="assets/img/icon-linkedin.png" alt=""></a>
-                </div>
-            </div>
-    </footer>
-
-    <script src="assets/script.js"></script>
-
+  <!-- CONTATO -->
+  <section class="contact" id="contato">
+    <div class="contact__inner">
+      <p class="contact__kicker">Bora conversar</p>
+      <h2>Tem um projeto em mente<br>ou só quer trocar uma ideia?</h2>
+      <div class="contact__row">
+        <button class="btn btn--primary" id="copy-email" data-email="mateus.gon.melo@gmail.com">
+          mateus.gon.melo@gmail.com
+        </button>
+        <a class="btn btn--ghost" href="https://github.com/TheuZN" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/mateus-melo-036411262" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn--ghost" href="https://www.instagram.com/mateus_gmelo/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <p class="contact__note" id="copy-feedback" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+<script src="script.js"></script>
 </body>
 </html>
