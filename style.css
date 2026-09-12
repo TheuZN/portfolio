@@ -290,6 +290,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 .card--wide {
   grid-column: 1 / -1;
 }
+.card--wide .card__shot,
+.card__shot.shot--wide {
+  aspect-ratio: 23 / 11;
+}
 .card {
   border: var(--border);
   background: var(--panel);
@@ -338,6 +342,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .card__shot {
   display: block;
   width: 100%;
+  aspect-ratio: 18 / 9;
   object-fit: cover;
   border-bottom: var(--border);
   background: var(--panel)
@@ -535,4 +540,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
   .nav__toggle { display: flex; }
   .project-grid { grid-template-columns: 1fr; }
+}
+
+.wrapLink {
+  overflow-wrap: break-word;
 }
