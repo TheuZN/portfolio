@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>Parede Matrix</title>
+  <rect width="64" height="64" rx="8" fill="#011207"/>
+  <g stroke="#00953c" stroke-width="4" fill="none">
+    <path d="M24 8V56"/>
+    <path d="M40 8V56"/>
+    <path d="M8 24H56"/>
+    <path d="M8 40H56"/>
+  </g>
+</svg>

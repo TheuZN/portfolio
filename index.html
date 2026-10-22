@@ -1,239 +1,249 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mateus — Desenvolvedor</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mateus Melo // Portfólio</title>
+  <meta name="description" content="Mateus Melo, desenvolvedor front-end em São Paulo. Interfaces para e-learning, Angular e .NET.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="img/ico.svg">
 </head>
 <body>
+  <div class="crt-overlay" aria-hidden="true"></div>
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
 
-<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-<header class="nav" id="nav">
-  <div class="nav__inner">
-    <a class="nav__logo" href="#topo">
-      <span class="nav__dot" aria-hidden="true"></span>
-      mateus<span class="accent">.</span>dev
-    </a>
-
-    <nav class="nav__links" id="nav-links">
-      <a href="#sobre">sobre</a>
-      <a href="#projetos">projetos</a>
-      <a href="#contato">contato</a>
-    </nav>
-
-    <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<main id="conteudo">
-
-  <!-- HERO -->
-  <section class="hero" id="topo">
-    <div class="hero__text">
-      <p class="hero__kicker">Front-end · Angular · e-learning · .NET</p>
-      <h1 class="hero__title">Olá.<br>Sou o Mateus.</h1>
-      <p class="hero__lead">
-        Desenvolvo interfaces pra e-learning no Senai-SP do storyboard em SCORM ao componente na tela. — focado em aprender Angular, React e .NET.
-      </p>
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="#projetos">Ver projetos</a>
-        <a class="btn btn--ghost" href="#contato">Falar comigo</a>
+  <main class="window">
+    <!-- Barra de título -->
+    <header class="titlebar">
+      <div class="titlebar__left">
+        <div class="win-controls" aria-hidden="true">
+          <span>[x]</span><span>[-]</span><span>[+]</span>
+        </div>
+        <span class="titlebar__name glow">M_OS_v2.4.exe</span>
       </div>
-    </div>
+    </header>
 
-    <div class="hero__art" aria-hidden="true">
-      <img src="img/pc.png" alt="Ilustração de um computador">
-    </div>
-  </section>
-
-  <!-- STACK STRIP -->
-  <section class="stack" id="stack">
-    <div class="stack__inner">
-      <ul class="stack__list">
-        <li>Angular</li>
-        <li>TypeScript</li>
-        <li>SCORM</li>
-        <li>Tailwind CSS</li>
-        <li>.NET</li>
-        <li>SQL</li>
-        <li>Git</li>
-      </ul>
-    </div>
-  </section>
-
-    <!-- SOBRE -->
-  <section class="about" id="sobre">
-    <div class="about__text">
-      <h2>Sobre</h2>
-      <p>
-        Minha trajetória profissional começou no e-commerce, onde desenvolvi experiência em operações, gestão e vendas online. Com o tempo, migrei para a área de tecnologia, aprofundando meus conhecimentos em desenvolvimento web, especialmente com Angular e .NET.
-      </p>
-      <p>
-        Hoje, trabalho no SENAI-SP com desenvolvimento e produção de materiais educacionais, atuando entre front-end, conteúdo digital e diagramação. No dia a dia, uno conhecimentos técnicos e visuais para transformar conteúdos em experiências digitais mais claras e funcionais.
-      </p>
-    </div>
-    <ul class="about__facts">
-      <li><span>Base</span>São Paulo - SP</li>
-      <li><span>Foco atual</span>Angular · .NET</li>
-      <li><span>GitHub</span>@TheuZN</li>
-      <li><span>Instagram</span>@mateus_gmelo</li>
-    </ul>
-  </section>
-
-  <!-- PROJETOS -->
-  <section class="projects" id="projetos">
-    <div class="section-head">
-      <h2>Projetos</h2>
-      <p>Uma seleção do que ando construindo — de reescritas de projetos reais a experimentos pessoais.</p>
-    </div>
-
-    <div class="project-grid">
-
-      <article class="card card--wide">
-        <div class="card__top">
-          <span class="card__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="card__badge">Uso pessoal</span>
+    <!-- Perfil -->
+    <section class="profile">
+      <div class="profile__avatar-col">
+        <div class="profile__handle">
+          <span>@mateus_gmelo</span>
+          <span class="blink">• ONLINE</span>
         </div>
-        <img class="card__shot shot--wide" src="img/flickpicks.png" alt="Captura de tela do projeto FlickPicks">
-        <div class="card__body">
-          <h3>FlickPicks</h3>
-          <p>FlickPicks é um app de descoberta de filmes/séries feito com Angular 22 (standalone components, signals, change detection zoneless) e Tailwind CSS 4, consumindo a API da TMDB direto pelo cliente.</p>
-          <ul class="card__tags">
-            <li>Angular 22</li><li>The Movie DB API</li><li>Tailwind CSS</li>
-          </ul>
+        <div class="avatar">
+          <img src="img/perfil.webp" alt="Foto de Mateus Melo">
+          <div class="avatar__tint" aria-hidden="true"></div>
         </div>
-        <div class="card__link">
-          <a  href="https://flickpicks-v2.vercel.app" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-          <br>
-          <a  href="https://github.com/TheuZN/flickpicksV2" target="_blank" rel="noopener noreferrer">Ver github</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card__top">
-          <span class="card__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="card__badge">CREA-SP</span>
-        </div>
-        <img class="card__shot" src="img/certgerador.png" alt="Captura de tela do projeto EasyStock">
-        <div class="card__body">
-          <h3>Gerador de Certificado .NET</h3>
-          <p>Aplicação desktop em .NET / C# (Windows Forms) que gera certificados em lote a partir de um template do Word e uma planilha CSV, convertendo cada documento automaticamente para PDF.</p>
-          <ul class="card__tags">
-            <li>.NET</li><li>C#</li><li>Windows Forms</li>
-          </ul>
-        </div>
-        <div class="card__link">
-          <a  href="https://github.com/TheuZN/certGeradorV2" target="_blank" rel="noopener noreferrer">Ver github</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card__top">
-          <span class="card__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="card__badge">E-commerce</span>
-        </div>
-        <img class="card__shot" src="img/easystock.png" alt="Captura de tela do projeto storyBuilder">
-        <div class="card__body">
-          <h3>Easy Stock</h3>
-          <p>Controle de estoque para pequenos negócios — cadastro de produtos com variações (tamanho/cor), marcas e categorias próprias, e alertas de estoque baixo. Angular 22 + Firebase.</p>
-          <ul class="card__tags">
-            <li>Angular 22</li><li>Firebase</li><li>Tailwind CSS</li>
-          </ul>
-        </div>
-        <div class="card__link">
-          <a  href="https://easy-stock-v2.vercel.app/" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-          <br>
-          <a  href="https://github.com/TheuZN/easyStockV2" target="_blank" rel="noopener noreferrer">Ver github</a>
-        </div>
-      </article>
-
-      <article class="card card--wide">
-        <div class="card__top">
-          <span class="card__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="card__badge">Senai-SP</span>
-        </div>
-        <img class="card__shot shot--wide" src="img/autoinstrucional.png" alt="Captura de tela do projeto AutoInstrucional">
-        <div class="card__body">
-          <h3>Curso Auto Instrucional</h3>
-          <p>Template Angular reutilizável para cursos autoinstrucionais — objetos de aprendizagem prontos (código, exercícios, gráficos, tabelas) e progresso salvo no navegador.</p>
-          <ul class="card__tags">
-            <li>Angular 22</li><li>Tailwind CSS</li>
-          </ul>
-        </div>
-        <div class="card__link">
-          <a  href="https://autoinstrucional.vercel.app/" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-          <br>
-          <a  href="https://github.com/TheuZN/AutoInstrucional" target="_blank" rel="noopener noreferrer">Ver github</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card__top">
-          <span class="card__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="card__badge">Uso Pessoal</span>
-        </div>
-        <img class="card__shot" src="img/backLoadGYM.png" alt="Captura de tela do projeto LoadGYM">
-        <div class="card__body">
-          <h3>Back-end LoadGYM</h3>
-          <p>API REST em .NET para acompanhamento de treino de academia — autenticação JWT, controle de treinos/exercícios e agregação de progressão de carga por semana.</p>
-          <ul class="card__tags">
-            <li>.NET</li><li>C#</li><li>Entity Framework</li>
-          </ul>
-        </div>
-        <div class="card__link">
-          <a  href="https://github.com/TheuZN/backLoadGYM" target="_blank" rel="noopener noreferrer">Ver github</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card__top">
-          <span class="card__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="card__badge">Uso Pessoal</span>
-        </div>
-        <img class="card__shot" src="img/frontLoadGYM.png" alt="Captura de tela do projeto Front LoadGYM">
-        <div class="card__body">
-          <h3>Front-end LoadGYM</h3>
-          <p>App Angular para acompanhamento de treino de academia — calendário de treinos, sessão com séries e cronômetro de descanso, e gráfico de progressão de carga.</p>
-          <ul class="card__tags">
-            <li>Angular 22</li><li>Tailwind CSS</li>
-          </ul>
-        </div>
-        <div class="card__link">
-          <!-- Isto é um comentário em HTML 
-          <a  href="" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-          <br>
-          -->
-          <a  href="https://github.com/TheuZN/frontLoadGYM" target="_blank" rel="noopener noreferrer">Ver github</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section class="contact" id="contato">
-    <div class="contact__inner">
-      <p class="contact__kicker">Bora conversar</p>
-      <h2>Tem um projeto em mente<br>ou só quer trocar uma ideia?</h2>
-      <div class="contact__row">
-        <button class="btn btn--primary" id="copy-email" data-email="mateus.gon.melo@gmail.com">
-          <span class="wrapLink">Copiar E-mail</span>
-        </button>
-        <a class="btn btn--ghost" href="https://github.com/TheuZN" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn--ghost" href="https://www.linkedin.com/in/mateus-melo-036411262" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn btn--ghost" href="https://www.instagram.com/mateus_gmelo/" target="_blank" rel="noopener">Instagram</a>
+        <div class="status-pill"><span class="blink">●</span> <span id="status-text">receiving data...</span></div>
+        <nav class="socials" aria-label="Redes sociais">
+          <div class="socials__title pixel glow">// CONECTAR</div>
+          <div class="socials__grid pixel">
+            <a href="https://github.com/TheuZN" target="_blank" rel="noopener noreferrer">[GITHUB]</a>
+            <a href="https://www.linkedin.com/in/mateus-melo-036411262" target="_blank" rel="noopener noreferrer">[LINKEDIN]</a>
+            <a href="https://www.instagram.com/mateus_gmelo/" target="_blank" rel="noopener noreferrer">[INSTAGRAM]</a>
+          </div>
+        </nav>
       </div>
-      <p class="contact__note" id="copy-feedback" aria-live="polite"></p>
-    </div>
-  </section>
-</main>
-<script src="script.js"></script>
+
+      <div class="profile__bio">
+        <div>
+          <div class="section-head">
+            <h1 class="pixel glow">Meu Perfil</h1>
+            <span class="muted-light">[ROOT_USER]</span>
+          </div>
+          <div class="identity">
+            <p class="identity__name">Mateus Melo</p>
+            <p class="identity__role">Desenvolvedor Front-end · Angular · .NET</p>
+            <p class="identity__place">São Paulo - SP, Brasil • EN/PT</p>
+          </div>
+
+          <div class="actions">
+            <button type="button" class="btn" id="copy-email">[+ Copiar E-Mail]</button>
+            <a class="btn" href="#projetos">[↓ Ver Projetos]</a>
+          </div>
+
+          <div class="box">
+            <div class="box__title"><span>INTERESSES PRINCIPAIS:</span><span class="tiny">L4ST_UPDATED</span></div>
+            <p>Desenvolvo interfaces pra e-learning no Senai-SP, do storyboard em SCORM ao componente na tela. Focado em aprender Angular, React e .NET.</p>
+          </div>
+        </div>
+        <div class="tiny pixel muted-light">SYS_UPTIME: 99.98% | FOCO_ATUAL: ANGULAR · .NET | LOCALHOST: ACTIVE</div>
+      </div>
+
+      <aside class="telemetry" aria-hidden="true">
+        <div>
+          <div class="telemetry__title">// TELEMETRIA DO NÓ</div>
+          <div class="telemetry__lines">
+            <p>CPU_LOAD: <span id="cpu-bar">[||||||....] 38%</span></p>
+            <p>RAM_ALLOC: <span id="ram">412MB</span> / 1024MB</p>
+            <p>KERNEL: 6.4.12-cyber-rt</p>
+            <p>NET_IO: RX: <span id="rx">8.4</span>MB TX: <span id="tx">2.1</span>MB</p>
+            <p>PORTS: 22, 80, 443, 4200</p>
+            <p class="muted-light">&gt;&gt; DECRYPTING PAYLOAD...</p>
+          </div>
+        </div>
+        <pre class="glitch" id="glitch">ｴｸﾅﾏﾊ7426ﾕ8
+ｱﾗｷ90019X3
+ﾇｺｳｸﾅﾓ562
+ﾗﾀ09ﾋ1874
+ｾｲﾁﾆｰﾏﾇ
+01001101 01000001
+01010100 01000101</pre>
+        <div class="telemetry__status">STATUS: SECURE_CHANNEL</div>
+      </aside>
+    </section>
+
+    <!-- Sobre + redes -->
+    <section class="notice">
+      <div class="box box--flat">
+        <p><span class="strong">[ SOBRE ]:</span> Comecei no e-commerce, com operações, gestão e vendas online, e migrei para a tecnologia com foco em Angular e .NET. Hoje trabalho no Senai-SP com materiais educacionais, entre front-end, conteúdo digital e diagramação.</p>
+      </div>
+
+      <div class="box box--flat">
+        <p><span class="strong">[ STACK: ]:</span></p>
+        <ul class="stack">
+          <li>Angular</li><li>React</li><li>TypeScript</li><li>SCORM</li><li>Moodle</li><li>Tailwind CSS</li><li>.NET</li><li>SQL</li><li>Git</li>
+        </ul>
+      </div>      
+    </section>
+
+    <!-- Projetos -->
+    <section class="projects" id="projetos">
+      <div class="section-head pixel">
+        <h2 class="glow">PROJETOS EM DESTAQUE</h2>
+        <span class="tiny muted-light">BUILD: 2026.1 · <span id="project-count">6</span> ARQUIVOS</span>
+      </div>
+
+      <article class="project">
+        <div class="project__head">
+          <h3>[01] FlickPicks</h3>
+          <span class="tag pixel">USO_PESSOAL</span>
+        </div>
+        <div class="project__body">
+          <a class="project__shot" href="https://flickpicks-v2.vercel.app" target="_blank" rel="noopener noreferrer">
+            <img src="img/flickpicks.png" alt="Tela do FlickPicks" loading="lazy">
+          </a>
+          <div class="project__info">
+            <p>App de descoberta de filmes e séries, com busca e detalhes alimentados pela API do The Movie DB.</p>
+            <div class="project__foot">
+              <span class="muted">STACK: Angular 22, Tailwind CSS 4, TMDB API</span>
+              <span class="project__links pixel">
+                <a href="https://flickpicks-v2.vercel.app" target="_blank" rel="noopener noreferrer">[VER PROJETO]</a>
+                <a class="alt" href="https://github.com/TheuZN/flickpicksV2" target="_blank" rel="noopener noreferrer">[REPOSITÓRIO]</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project__head">
+          <h3>[02] Gerador de Certificado .NET</h3>
+          <span class="tag pixel">PORTFÓLIO</span>
+        </div>
+        <div class="project__body">
+          <a class="project__shot" href="https://github.com/TheuZN/certGeradorV2" target="_blank" rel="noopener noreferrer">
+            <img src="img/certgerador.png" alt="Tela do Gerador de Certificado" loading="lazy">
+          </a>
+          <div class="project__info">
+            <p>Aplicação desktop que gera certificados em lote a partir de um template do Word e de uma planilha CSV, convertendo tudo para PDF.</p>
+            <div class="project__foot">
+              <span class="muted">STACK: C#, .NET, Windows Forms</span>
+              <span class="project__links pixel">
+                <a class="alt" href="https://github.com/TheuZN/certGeradorV2" target="_blank" rel="noopener noreferrer">[REPOSITÓRIO]</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project__head">
+          <h3>[03] Easy Stock</h3>
+          <span class="tag pixel">E-COMMERCE</span>
+        </div>
+        <div class="project__body">
+          <a class="project__shot" href="https://easy-stock-v2.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <img src="img/easystock.png" alt="Tela do Easy Stock" loading="lazy">
+          </a>
+          <div class="project__info">
+            <p>Controle de estoque para pequenos negócios, com variações, marcas, categorias e alertas de estoque baixo.</p>
+            <div class="project__foot">
+              <span class="muted">STACK: Angular 22, Firebase, Tailwind CSS</span>
+              <span class="project__links pixel">
+                <a href="https://easy-stock-v2.vercel.app/" target="_blank" rel="noopener noreferrer">[VER PROJETO]</a>
+                <a class="alt" href="https://github.com/TheuZN/easyStockV2" target="_blank" rel="noopener noreferrer">[REPOSITÓRIO]</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project__head">
+          <h3>[04] Curso Auto Instrucional</h3>
+          <span class="tag pixel">SENAI-SP</span>
+        </div>
+        <div class="project__body">
+          <a class="project__shot" href="https://autoinstrucional.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <img src="img/autoinstrucional.png" alt="Tela do Curso Auto Instrucional" loading="lazy">
+          </a>
+          <div class="project__info">
+            <p>Template para cursos autoinstrucionais, com objetos de aprendizagem e progresso salvo no navegador.</p>
+            <div class="project__foot">
+              <span class="muted">STACK: Angular 22, Tailwind CSS</span>
+              <span class="project__links pixel">
+                <a href="https://autoinstrucional.vercel.app/" target="_blank" rel="noopener noreferrer">[VER PROJETO]</a>
+                <a class="alt" href="https://github.com/TheuZN/AutoInstrucional" target="_blank" rel="noopener noreferrer">[REPOSITÓRIO]</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project__head">
+          <h3>[05] Front-end LoadGYM</h3>
+          <span class="tag pixel">USO_PESSOAL</span>
+        </div>
+        <div class="project__body">
+          <a class="project__shot" href="https://github.com/TheuZN/frontLoadGYM" target="_blank" rel="noopener noreferrer">
+            <img src="img/frontLoadGYM.png" alt="Front-end LoadGYM" loading="lazy">
+          </a>
+          <div class="project__info">
+            <p>App com calendário de treinos, sessões com cronômetro e gráfico de progressão de carga.</p>
+            <div class="project__foot">
+              <span class="muted">STACK: Angular 22, Tailwind CSS</span>
+              <span class="project__links pixel">
+                <a href="" target="_blank" rel="noopener noreferrer">[VER PROJETO]</a>
+              </span>
+              <div style="display: flex; justify-content: right; width: stretch;">
+                  <span class="project__links pixel">
+                    <a class="alt" href="https://github.com/TheuZN/backLoadGYM" target="_blank" rel="noopener noreferrer">[REPOSITÓRIO FRONT-END]</a>
+                  </span>
+              </div>
+              <div style="display: flex; justify-content: right; width: stretch;">
+                  <span class="project__links pixel">
+                    <a class="alt" href="https://github.com/TheuZN/backLoadGYM" target="_blank" rel="noopener noreferrer">[REPOSITÓRIO BACK-END]</a>
+                  </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <span>(Made with code &amp; nostalgia // Matrix OS)</span>
+      <span>© <span id="year">2026</span> Mateus Melo. Todos os direitos reservados.</span>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
